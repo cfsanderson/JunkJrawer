@@ -18,6 +18,13 @@ a:hover {
 }
 
 h1 {
-  text-align: center;
   font-size: 4em;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+#script-output {
+  max-width: 768px;
 }

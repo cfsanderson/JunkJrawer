@@ -1,27 +1,29 @@
+document.write(`<h3>Get Your Name</h3>`, "<br />")
+
 let name
 const getYourName = () => {
   name = prompt("What is your name?");
 }
-getYourName()
+// getYourName()
 
 const printYourName = () => {
   if(name){
     // Set text in an HTML element with the id sayHello
     // You concatenate (combine) strings with +
-    document.getElementById("sayHello").innerHTML = "Hello " + name ;
+    document.getElementById("sayHello").innerHTML = "Hello " + name + ". Get to work!";
   } else {
     // Alert opens a popup that contains a message
     alert("Please Enter Your Name Next Time");
   }
 }
-printYourName()
+// printYourName()
 
 // If performs different actions depending on conditions
 
 let numbersHeader = "<h3>Numbers in Javascript</h3>"
 document.write(numbersHeader)
 
-// Maths
+document.write(`<h3>Math Stuff</h3>`, "<br />")
 document.write("5 + 4 = ", 5 + 4, "<br />")
 document.write("5 + 4 = " + 5 + 4, "<br />") /* concats mistake */
 document.write("5 - 4 = ", 5 - 4, "<br />")
@@ -44,7 +46,8 @@ document.write("Monthly Payment: ", (balance1 / 12).toFixed(2), "<br />")
 let balance2 = 1563.87
 document.write("Monthly Payment: ", (balance2 / 12), "<br />")
 
-// operators
+document.write(`<h3>Operators</h3>`, "<br />")
+
 let randNum = 5
 document.write("randNum++ = ", randNum++, "<br />")
 document.write("++randNum = ", ++randNum, "<br />")
@@ -54,15 +57,19 @@ document.write("randNum1 += 5 = ", randNum += 5, "<br />")
 document.write("randNum1 -= 5 = ", randNum -= 5, "<br />")
 document.write("randNum1 *= 5 = ", randNum *= 5, "<br />")
 document.write("randNum1 /= 5 = ", randNum /= 5, "<br />")
-// Order of ops
+
+document.write(`<h3>Order of Operations</h3>`, "<br />")
+
 document.write("3 + 2 * 5 = ", 3 + 2 * 5, "<br />")
 document.write("(3 + 2) * 5 = ", (3 + 2) * 5, "<br />")
 
-// built-in numbers
+document.write(`<h3>Built-in Numbers</h3>`, "<br />")
+
 document.write("Math.E = ", Math.E, "<br />")
 document.write("Math.PI = ", Math.PI, "<br />")
 
-// built-in math methods
+document.write(`<h3>Built-in Methods</h3>`, "<br />")
+
 document.write("Math.abs(-8) = ", Math.abs(-8), "<br/>");
 document.write("Math.cbrt(1000) = ", Math.cbrt(1000), "<br/>");
 document.write("Math.ceil(6.45) = ", Math.ceil(6.45), "<br/>");
@@ -75,23 +82,23 @@ document.write("Math.min(10,5) = ", Math.min(10,5), "<br/>");
 document.write("Math.pow(4,2) = ", Math.pow(4,2), "<br/>");
 document.write("Math.sqrt(1000) = ", Math.sqrt(1000), "<br/>");
 
-// randoms
-document.write("Random # (1-10) = ", Math.floor((Math.random() * 10) + 1), "<br/>"); /* */
+document.write(`<h3>Randoms</h3>`, "<br />")
 
 document.write("Random # (1-10) = ", Math.floor((Math.random() * 10) + 1), "<br/>");
 
-// Convert strings to numbers
-document.write("Converted String : ", Number("3.14"), "<br />");
+document.write(`<h3>Convert strings to numbers</h3>`, "<br />")
 
+document.write("Converted String : ", Number("3.14"), "<br />");
 document.write("Converted Int : ", parseInt("5"), "<br />");
 document.write("Converted Float : ", parseFloat("5.555"), "<br />");
 
 /*---------- STRINGS ----------*/
+document.write(`<h3>Strings</h3>`, "<br />")
+
 let randStr = "A long " + "string that " + "goes on and on";
 
 // String length
 document.write("String Length : ", randStr.length + "<br/>");
-
 document.write("Index for \"goes\" : ", randStr.indexOf("goes"), "<br/>");
 
 // Return the value using a start and end index
@@ -121,7 +128,7 @@ document.write(randStr.toUpperCase() + "<br/>");
 // Convert to lowercase
 document.write(randStr.toLowerCase() + "<br/>");
 
-// Styling with JS
+document.write(`<h3>Styling with JS</h3>`, "<br />")
 let strToStyle = "Random String";
 
 document.write("Big : ", strToStyle.big(), "<br />");
@@ -136,6 +143,7 @@ document.write("Sub : ", strToStyle.sub(), "<br />");
 document.write("Sup : ", strToStyle.sup(), "<br />");
 
 /*---------- CONDITIONALS ----------*/
+document.write(`<h3>Conditionals</h3>`, "<br />")
 // Relational Operators : == != > < >= <=
 // === : Equal value and type
 // Logical Operators : && || !
@@ -157,6 +165,7 @@ document.write("\"5\" === 5 = ", ("5" === 5), "<br />");
 
 // Switch is used to match a limited number of options
 switch(age) {
+  // two cases means either one will work..
   case 5 :
   case 6 :
     document.write("Go to Kindergarten<br />");
@@ -175,3 +184,91 @@ switch(age) {
 let canIVote = (age >= 18) ? true : false;
 
 document.write("Can I Vote? : ", canIVote, "<br />");
+
+// Looping
+document.write(`<h3>Looping</h3>`, "<br />")
+
+document.write(`<ul id="unorderedList1"></ul>`, "<br />")
+let list1 = document.getElementById("unorderedList1")
+let i = 1
+while(i <= 10) {
+  list1.innerHTML += `<li>${i}</li>`
+  i++
+}
+
+// do {
+//   let guess = prompt("Guess a number between 1 and 20")
+// } while (guess != 15)
+//
+// alert("You guessed 15!");
+
+// for loop
+document.write(`<ul id="unorderedList2"></ul>`, "<br />")
+let list2 = document.getElementById("unorderedList2")
+
+for(j = 0; j <= 20; j++) {
+  if((j % 2) === 0) {
+    continue;
+  }
+
+  if(j === 15) {
+    break;
+  }
+  list2.innerHTML += `<li>${j}</li>`
+}
+
+// for in loop
+
+document.write(`<ul id="unorderedList3"></ul>`, "<br />")
+let list3 = document.getElementById("unorderedList3")
+
+let customer = {name : "Bob Thomas", address : "123 Main St.", balance : 50.50}
+
+for (let k in customer) {
+  list3.innerHTML += `<li>${customer[k]}</li>`
+}
+
+// Arrays
+document.write(`<h3>Arrays</h3>`, "<br />")
+
+let tomSmith = ["Tom Smith", "456 Main St.", 120.50]
+
+document.write("1st Index = ", tomSmith[0], "<br />")
+document.write("2nd Index = ", tomSmith[1], "<br />")
+
+tomSmith[3] = 'tSmith@aol.com'
+
+tomSmith.splice(2, 1, "Pittsburgh", "PA")
+tomSmith.splice(4, 1)
+
+document.write(`<p>Array : ${tomSmith.toString()}</p>`)
+document.write(`<p>Array : ${tomSmith.valueOf()}</p>`)
+document.write(`<p>Array : ${tomSmith.join(", ")}</p>`)
+
+delete tomSmith[3]
+
+document.write(`<p>${tomSmith.sort()}</p>`, "<br />")
+
+let numbers = [4, 3, 9, 1, 20, 43]
+numbers.sort(function(x, y){return x - y})
+
+document.write(`<p>Number Array ${numbers.join(", ")}</p>`)
+
+let combinedArray = numbers.concat(tomSmith)
+
+tomSmith.pop()
+tomSmith.push("555-1212", "US")
+// delete first item
+tomSmith.shift()
+// add items to front of array
+tomSmith.unshift("Tom Smithington")
+
+document.write(`<ul id="unorderedList4"></ul>`)
+let list4 = document.getElementById("unorderedList4")
+
+for (var l = 0; l < tomSmith.length; l++) {
+  list4.innerHTML += `<li>${tomSmith[l]}</li>`
+}
+
+// Functions
+document.write(`<h3>Functions (34:42)</h3>`, "<br />")
