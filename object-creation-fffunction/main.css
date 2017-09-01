@@ -1,0 +1,26 @@
+body {
+  color: #e8e8e8;
+  background: #222222;
+  font-family: 'Helvetica Neue', sans-serif;
+  padding: 50px;
+  line-height: 1.5em;
+  font-size: 0.8em;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4em;
+}
+
+#on-the-paper {
+  height: 500px;
+  max-width: 80%;
+  /*background: #e8e8e8 url('/img/paper.jpg') cover / contain;*/
+  background: url('./img/paper.jpg') center / cover no-repeat #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #222;
+  font-family: serif;
+  font-size: 2em;
+}

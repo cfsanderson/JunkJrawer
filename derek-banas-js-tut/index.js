@@ -266,9 +266,18 @@ tomSmith.unshift("Tom Smithington")
 document.write(`<ul id="unorderedList4"></ul>`)
 let list4 = document.getElementById("unorderedList4")
 
-for (var l = 0; l < tomSmith.length; l++) {
+for (let l = 0; l < tomSmith.length; l++) {
   list4.innerHTML += `<li>${tomSmith[l]}</li>`
 }
 
 // Functions
 document.write(`<h3>Functions (34:42)</h3>`, "<br />")
+
+function inArray(arrayToCheck, value) {
+  for(i = 0; i < arrayToCheck.length; i++) {
+    if (arrayToCheck[i] === value) {
+      return true;
+    }
+  }
+  return false;
+}
