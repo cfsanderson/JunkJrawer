@@ -281,3 +281,62 @@ function inArray(arrayToCheck, value) {
   }
   return false;
 }
+let randArray = [1,2,3,4,5]
+
+document.write(`<p>In array?: ${inArray(randArray, 5)}</p>`, "<br />")
+
+function times2(num) {
+  let two = 2
+  return num * two
+}
+
+function times3(num) {
+  return num * 3
+}
+
+function multiply(func, num) {
+  return func(num)
+}
+
+document.write(`<p>2 * 15 = ${multiply(times2, 15)}</p>`, "<br />")
+document.write(`<p>3 * 15 = ${multiply(times3, 15)}</p>`, "<br />")
+
+var triple = function(num) {
+  return num * 3
+}
+
+document.write(`<p>3 * 45 = ${multiply(triple, 45)}</p>`, "<br />")
+
+function getSum() {
+  let sum = 0
+  for(i = 0; i < arguments.length; i++) {
+    sum += arguments[i]
+  }
+  return sum
+}
+
+document.write(`<p>Sum = ${getSum(1,2,3,4,5,6)}</p>`, "<br />")
+
+function doubleArray(arr) {
+  let newArr = []
+  for(i = 0; i < arr.length; i++) {
+    newArr.push(arr[i] * 2)
+  }
+  return newArr
+}
+
+document.write(`<p>Array doubled = ${doubleArray([1,2,3,4,5])}</p>`, "<br />")
+
+function factorial(num) {
+  if(num <= 1) {
+    return 1
+  } else {
+    return num * factorial(num - 1)
+  }
+}
+
+document.write(`<p>Factorial of 4 = ${factorial(4)}</p>`, "<br />")
+
+
+/*----- Event Handling -----*/
+document.write(`<a href='https://youtu.be/fju9ii8YsGs?t=43m50s' target='_blank'><h3>Event Handling (34:42)</h3><a/>`, "<br />")
